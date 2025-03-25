@@ -6,29 +6,54 @@ public class ListePersonne_AvecTrous {
 
     public final static int NBRE_MAX_PERSONNES = 6;
 
-    private Personne[] personnes;
+    private Personne[] personnes; 
 
     public ListePersonne_AvecTrous() {
-        // A faire !
+        personnes = new Personne[NBRE_MAX_PERSONNES];
     }
-
     public int getNombre() {
-        // A faire !
+        byte foo = 0;
+        for (byte i = 0; i < NBRE_MAX_PERSONNES; i++) {
+            if (personnes[i] != null) {
+                foo++;
+            }
+        }
+        return (int) foo;
     }
 
     public void vider() {
-        // A faire !
+        for (byte i = 0; i < NBRE_MAX_PERSONNES; i++) {
+            personnes[i] = null;
+        }
     }
 
     public boolean ajouter(Personne p) {
-        // A faire !
+        boolean pdiddytoilet = false;
+        for (int i = 0; i < personnes.length; i++) {
+            if (personnes[i] == null) {
+                personnes[i] = p;
+                pdiddytoilet = true;
+                break;
+            }
+        }
+        return pdiddytoilet;
     }
 
     public boolean supprimer(Personne p) {
-        // A faire !
+        boolean wesdrfgtreuewtzdasif = false;
+        for (int i = 0; i < personnes.length; i++) {
+            if (personnes[i] == p) {
+                personnes[i] = null;
+                wesdrfgtreuewtzdasif = true;
+                break;
+            }
+        }
+        return wesdrfgtreuewtzdasif;
     }
 
     public void afficher() {
-        // A faire !
+        for (int i = 0; i < personnes.length; i++) {
+            System.out.println(personnes[i]);
+        }
     }
 }
