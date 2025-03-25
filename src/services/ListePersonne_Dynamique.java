@@ -18,7 +18,7 @@ public class ListePersonne_Dynamique {
     }
 
     public void vider() {
-        personnes = null;
+        personnes.clear();
     }
 
     public boolean ajouter(Personne p) {
