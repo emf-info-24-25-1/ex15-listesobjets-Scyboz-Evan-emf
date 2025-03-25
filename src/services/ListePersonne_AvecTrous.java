@@ -12,7 +12,7 @@ public class ListePersonne_AvecTrous {
     }
 
     public int getNombre() {
-        return personnes != null ? personnes.length : -1;
+        return personnes != null ? personnes.length : 0;
     }
 
     public void vider() {
