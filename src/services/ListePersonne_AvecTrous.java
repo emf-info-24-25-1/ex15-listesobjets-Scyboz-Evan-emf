@@ -12,11 +12,19 @@ public class ListePersonne_AvecTrous {
     }
 
     public int getNombre() {
-        return personnes != null ? personnes.length : 0;
+        byte foo = 0;
+        for (byte i = 0; i < NBRE_MAX_PERSONNES; i++) {
+            if (personnes[i] != null) {
+                foo++;
+            }
+        }
+        return (int) foo;
     }
 
     public void vider() {
-        personnes = null;
+        for (byte i = 0; i < NBRE_MAX_PERSONNES; i++) {
+            personnes[i] = null;
+        }
     }
 
     public boolean ajouter(Personne p) {
